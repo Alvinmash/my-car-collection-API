@@ -1,0 +1,32 @@
+{
+  "name": "my-car-collection-api",
+  "version": "1.0.0",
+  "description": "in this API  you will need to have a different collection of cars, you have  sedans, coupes,sports cars, super cars ansd hyper cars",
+  "main": "cars.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "./node_modules/.bin/nodemon index.js ",
+    "lint": " npm run lint:puglint && npm run lint:eslint",
+    "lint:eslint": "./node_modules/.bin/eslint --format codeframe",
+    "lint:puglint": "./node_modules/.bin/pug-lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alvinmash/my-car-collection-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alvinmash/my-car-collection-API/issues"
+  },
+  "homepage": "https://github.com/Alvinmash/my-car-collection-API#readme",
+  "dependencies": {
+    "eslint": "^6.8.0",
+    "express": "^4.17.1",
+    "pug": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3",
+    "pug-lint": "^2.6.0"
+  }
+}
