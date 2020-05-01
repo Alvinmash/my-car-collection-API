@@ -1,6 +1,5 @@
 const express = require('express')
 const carData = require('./cars')
-
 const app = express()
 
 app.set('view engine', 'pug')
