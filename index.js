@@ -6,15 +6,9 @@ const app = express()
 app.set('view engine', 'pug')
 app.use(express.static('public'))
 
-// app.get('/cars', (_request, response) => {
-//   return response.send(carData)
-// })
-
 app.get('/cars', (_request, response) => {
   return response.render('index', { carData })
 })
-
-
 
 app.all('*', (_request, response) => {
   return response.status(404).send('sorry! page not found')
