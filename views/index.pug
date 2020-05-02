@@ -7,6 +7,7 @@ html
      h2. here's a curated list of cars desired by customers /people
     ul.list 
       p Get the cars listed 
+
       li.carList
         p 
           strong GET 
@@ -15,6 +16,7 @@ html
             p Method: GET 
             p Route: http://localhost:2035/cars/allCars   
             p Desired outcome : this should bring out all the cars 
+
       li.listItems 
             p 
           strong GET 
@@ -32,6 +34,7 @@ html
             p Headers: content type : application/JSON
             p Body: {model, type, year, modelname, founder}
             p Desired Outcome ; cerates new fileds with list of new cars. 
+
             li.listCars
         p 
           strong DELETE 
@@ -41,6 +44,7 @@ html
             p Route: http://localhost2035/cars/CarsById
             p Headers:   content type : application/JSON
             p Desired outcome : Delets cars by Id provided 
+
       li.listItems 
         p 
           strong Patch 
@@ -51,6 +55,7 @@ html
             p Headers: Content type :application/JSON
             p Body: {model, type, year, modelname, founder}
             p Desired outcome : Cars provided with a  specific id will be updated.
+            
       li.listItems 
         p 
           strong GET 
