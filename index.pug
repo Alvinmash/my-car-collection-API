@@ -1,0 +1,63 @@
+html
+  head
+    link(rel="stylesheet" href="/style.css")
+    script(src="../vehicles.js")
+    body
+    h1.🚦MY CAR COLLECTION API 🏎
+    h2. here's a curated list of vehicles desired by customers/people
+
+    ul.list 
+      p Get the vehicles listed 
+      li.carList
+      p 
+      strong GET 
+      | all vehicles
+      div#getAllCars
+      p Method: GET 
+      p Route: http://localhost:8181/vehicles 
+      p Desired outcome : this should bring out all the cars 
+      li.listItems 
+      p 
+      strong GET 
+      | vehicles By Model
+      div 
+      p Method: GET 
+      p Route: http://localhost:8181/vehicles/model
+        p Headers: content type : application/JSON.  
+            p Desired outcome :Gets all cars with the model provided .
+
+      li.listItems 
+            p 
+          strong GET 
+          | gets all models
+        div#getById
+            p method : GET 
+            p route: http://localhost:8181/cars/models{id}
+            p these are all the models by their names
+                  li.listItems 
+        p 
+          strong GET 
+          | get all ModelById
+        div 
+              p Method: GET. 
+              p Route: http://localhost:8181/models/:id
+              p Headers: content type : application/JSON .  
+              p Desired outcome : gets the cars with the modelId
+                  li.listItems 
+        p 
+          strong GET 
+          | get all ModelYears
+        div 
+              p Method: GET. 
+              p Route: http://localhost8181/vehicles/Modelyears
+              p Headers: content type : application/JSON .  
+              p Desired outcome : gets the cars with the modelName provided .
+                  li.listItems 
+        p 
+          strong GET 
+          | ge tAll ModelYears by Vehicles
+        div 
+              p Method: GET. 
+              p Route: http://localhost8181/vehicles/Modelyears
+              p Headers: content type : application/JSON .  
+              p Desired outcome : gets the cars with the modelName provided .

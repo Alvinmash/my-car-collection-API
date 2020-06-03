@@ -1,4 +1,4 @@
-const cars = [{
+const vehicles = [{
   id: 1,
   model: 'toyota',
   type: 'sedan',
@@ -112,5 +112,4 @@ const cars = [{
   founder: 'bentley brothers',
 }]
 
-
-module.exports = cars
+module.exports = vehicles

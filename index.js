@@ -1,26 +1,20 @@
 const express = require('express')
-const carData = require('./cars')
+const { getAllVehicles, getAllVehiclesByModel } = require('./controllers/vehicles')
+const { getAllModelNames, getModelById } = require('./controllers/models')
+const { getAllModelYears, getModelYearByVehicles } = require('./controllers/modelyears')
 
 const app = express()
 
-app.set('view engine', 'pug')
-app.use(express.static('public'))
+app.get('/vehicles', getAllVehicles)
+app.get('/vehicles/:identifier', getAllVehiclesByModel)
 
-// app.get('/cars', (_request, response) => {
-//   return response.send(carData)
-// })
+app.get('/models', getAllModelNames)
+app.get('/models/:id', getModelById)
 
-app.get('/cars', (_request, response) => {
-  return response.render('index', { carData })
-})
+app.get('/modelyears', getAllModelYears)
+app.get('/modelyears/:identifier', getModelYearByVehicles)
 
-
-
-app.all('*', (_request, response) => {
-  return response.status(404).send('sorry! page not found')
-})
-
-app.listen(7825, () => {
+app.listen(8181, () => {
   // eslint-disable-next-line no-console
-  console.log('guaranteed ! the port is listening on  7825')
+  console.log('Listening on port 8181...')
 })
