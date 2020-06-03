@@ -1,96 +1,63 @@
 html
   head
     link(rel="stylesheet" href="/style.css")
-    script(src="../cars.js")
+    script(src="../vehicles.js")
     body
-     h1.🚦MY CAR COLLECTION API 🏎
+    h1.🚦MY CAR COLLECTION API 🏎
+    h2. here's a curated list of vehicles desired by customers/people
 
-     h2. here's a curated list of cars desired by customers /people
-     
     ul.list 
-      p Get the cars listed 
-
+      p Get the vehicles listed 
       li.carList
-        p 
-          strong GET 
-          | /allCars
-        div#getAllCars
-            p Method: GET 
-            p Route: http://localhost:2035/cars/allCars   
-            p Desired outcome : this should bring out all the cars 
+      p 
+      strong GET 
+      | all vehicles
+      div#getAllCars
+      p Method: GET 
+      p Route: http://localhost:8181/vehicles 
+      p Desired outcome : this should bring out all the cars 
+      li.listItems 
+      p 
+      strong GET 
+      | vehicles By Model
+      div 
+      p Method: GET 
+      p Route: http://localhost:8181/vehicles/model
+        p Headers: content type : application/JSON.  
+            p Desired outcome :Gets all cars with the model provided .
 
       li.listItems 
             p 
           strong GET 
-          |/all Cars By Id
+          | gets all models
         div#getById
             p method : GET 
-            p route: http.//localhost:7825/cars/allCars{id}
-            p these are all the cars by their id 
-        p 
-          strong POST 
-          | /allCars
-        div 
-            p Method: POST 
-            p Route: http://localhost2035/cars/allCars
-            p Headers: content type : application/JSON
-            p Body: {model, type, year, modelname, founder}
-            p Desired Outcome ; cerates new fileds with list of new cars. 
-
-            li.listCars
-        p 
-          strong DELETE 
-          | /car By Id
-        div 
-            p Method: DELETE 
-            p Route: http://localhost2035/cars/CarsById
-            p Headers:   content type : application/JSON
-            p Desired outcome : Delets cars by Id provided 
-
-      li.listItems 
-        p 
-          strong Patch 
-          | /Cars By Id
-        div 
-            p Method: Patch
-            p Route: http://localhost2035/cookies/CarsById
-            p Headers: Content type :application/JSON
-            p Body: {model, type, year, modelname, founder}
-            p Desired outcome : Cars provided with a  specific id will be updated.
-            
-      li.listItems 
+            p route: http://localhost:8181/cars/models{id}
+            p these are all the models by their names
+                  li.listItems 
         p 
           strong GET 
-          | /BagsByFounder
-        div 
-            p Method: GET .
-            p Route: http://localhost2035/bags/carByFounder.
-            p Headers:   content type : application/JSON.
-            p Desired outcome : gets the cars created by the founder.
-      li.listItems 
-        p 
-          strong GET 
-          | /bagsByModel
-        div 
-            p Method: GET .
-            p Route: http://localhost2035/bags/carByModel.
-            p Headers: content type : application/JSON.  
-            p Desired outcome :Gets all cars with the model provided .
-      li.listItems 
-        p 
-          strong GET 
-          | /bagsByModelName
+          | get all ModelById
         div 
               p Method: GET. 
-              p Route: http://localhost2035/cars/carByModelName.
+              p Route: http://localhost:8181/models/:id
+              p Headers: content type : application/JSON .  
+              p Desired outcome : gets the cars with the modelId
+                  li.listItems 
+        p 
+          strong GET 
+          | get all ModelYears
+        div 
+              p Method: GET. 
+              p Route: http://localhost8181/vehicles/Modelyears
               p Headers: content type : application/JSON .  
               p Desired outcome : gets the cars with the modelName provided .
-        li.listItems 
+                  li.listItems 
         p 
-          strong  
-          | /car By type
+          strong GET 
+          | ge tAll ModelYears by Vehicles
         div 
-            p Method: DELETE .
-            p Route: http://localhost2035/cars/CarsBytype.
-            p Headers:   content type : application/JSON.
-            p Desired outcome : gets all the different car types from sedan to sports to hyper cars .
+              p Method: GET. 
+              p Route: http://localhost8181/vehicles/Modelyears
+              p Headers: content type : application/JSON .  
+              p Desired outcome : gets the cars with the modelName provided .
